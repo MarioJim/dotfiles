@@ -84,7 +84,7 @@ SAVEHIST=100000
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+export EDITOR='nvim'
 # fi
 
 # Compilation flags
@@ -104,7 +104,6 @@ SAVEHIST=100000
 
 # redefine prompt_context for hiding user@hostname
 prompt_context () { }
-source /usr/share/nvm/init-nvm.sh
 
 # personal aliases
 alias ls="exa -al"

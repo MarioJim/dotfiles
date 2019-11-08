@@ -51,11 +51,11 @@ font-2 = fixed:pixelsize=10;1
 
 modules-left = i3 spotify
 modules-center = date
-modules-right = xbacklight pulseaudio memory cpu wlan battery powermenu
+modules-right = wlan xbacklight pulseaudio memory cpu battery
 
 tray-position = right
 tray-padding = 5
-tray-background = #0063ff
+;tray-detached = true
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
@@ -114,7 +114,7 @@ label-separator = |
 type = custom/script
 interval = 1
 format = <label>
-exec = python /usr/share/polybar/scripts/spotify_status.py -t 40 -f '{play_pause} {song} - {artist}'
+exec = python /usr/share/polybar/scripts/spotify_status.py -t 40 -f '{play_pause} {song} - {artist}' -p ','
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -213,7 +213,7 @@ format-charging = <animation-charging> <label-charging>
 
 format-discharging = <animation-discharging> <label-discharging>
 
-format-full-prefix = ""
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = 

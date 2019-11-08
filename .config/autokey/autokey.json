@@ -5,17 +5,17 @@
         "isFirstRun": true,
         "serviceRunning": true,
         "menuTakesFocus": false,
-        "showTrayIcon": false,
+        "showTrayIcon": true,
         "sortByUsageCount": true,
         "promptToSave": false,
         "enableQT4Workaround": false,
         "interfaceType": "XRecord",
         "undoUsingBackspace": true,
         "windowDefaultSize": [
-            843,
-            1050
+            940,
+            1018
         ],
-        "hPanePosition": 194,
+        "hPanePosition": 217,
         "columnWidths": [
             150,
             50,

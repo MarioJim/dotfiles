@@ -13,10 +13,10 @@ font pango:Product Sans 12
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up l
-set $down k
-set $left j
-set $right semicolon
+set $up k
+set $down j
+set $left h
+set $right l
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -32,7 +32,7 @@ bindsym $mod+Shift+q kill
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet &
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -89,7 +89,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+z split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -229,7 +229,7 @@ for_window [class=".*"] border pixel 0
 hide_edge_borders both
 
 # setup wallpaper
-exec --no-startup-id "feh --bg-fill ~/Pictures/WPs/meteor.jpg"
+exec --no-startup-id feh --bg-fill ~/Pictures/WPs/meteor2.jpeg &
 
 # run startup programs
 exec --no-startup-id compton &
@@ -246,4 +246,5 @@ bindsym $mod+x exec ~/scripts/lockscreen.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # set xinput props
-exec_always "xinput set-prop 'SYNA7DB5:00 06CB:7DB7 Touchpad' 301 1"
+exec_always --no-startup-id "xinput set-prop 'SYNA7DB5:00 06CB:7DB7 Touchpad' 301 1"
+exec_always --no-startup-id "xinput set-prop 'SYNA7DB5:00 06CB:7DB7 Touchpad' 309 1"
