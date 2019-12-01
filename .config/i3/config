@@ -215,12 +215,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        status_command i3status
-#        position top
-#}
+# chromium bindings
+bindsym $mod+n exec "chromium"
+bindsym $mod+Shift+n exec "chromium --incognito"
 
 # rofi
 bindsym $mod+d exec "rofi -modi drun,window -show"
@@ -233,9 +230,6 @@ smart_borders on
 # Remove borders for i3-gaps
 for_window [class=".*"] border pixel 0
 hide_edge_borders both
-
-# setup wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/WPs/meteor2.jpeg &
 
 # run startup programs
 exec --no-startup-id compton &
@@ -255,5 +249,5 @@ bindsym $mod+x exec ~/scripts/lockscreen.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # set xinput props
-exec_always --no-startup-id "xinput set-prop 'SYNA7DB5:00 06CB:7DB7 Touchpad' 301 1"
-exec_always --no-startup-id "xinput set-prop 'SYNA7DB5:00 06CB:7DB7 Touchpad' 309 1"
+exec_always --no-startup-id "xinput set-prop 'SYNA7DB5:00 06CB:7DB7 Touchpad' 303 1"
+exec_always --no-startup-id "xinput set-prop 'SYNA7DB5:00 06CB:7DB7 Touchpad' 311 1"

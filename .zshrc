@@ -63,11 +63,12 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
-	vscode
-	sudo
-        zsh-syntax-highlighting
-        zsh-autosuggestions
+    git
+    vscode
+    sudo
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    extract
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -103,6 +104,7 @@ prompt_context () { }
 
 # personal aliases
 alias ls="exa -al"
+alias cat="bat"
 
 # Preferred terminal
 export TERMINAL='kitty'

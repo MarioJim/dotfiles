@@ -46,8 +46,8 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "SF Pro Text:pixelsize=12;1"
-font-1 = "Font Awesome:pixelsize=12;1"
-font-2 = fixed:pixelsize=10;1
+font-1 = "FontAwesome:pixelsize=12;1"
+font-2 = "Fira Mono for Powerline:pixelsize=10;1"
 
 modules-left = i3 spotify
 modules-center = date
