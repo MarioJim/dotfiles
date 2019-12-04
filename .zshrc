@@ -99,6 +99,9 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# show hidden files in autocomplete
+setopt globdots
+
 # redefine prompt_context for hiding user@hostname
 prompt_context () { }
 

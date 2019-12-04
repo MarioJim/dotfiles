@@ -7,7 +7,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'jiangmiao/auto-pairs'
 Plug 'rakr/vim-one'
-
 call plug#end()
 
 let g:lightline = { 'colorscheme': 'one', }
