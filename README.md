@@ -17,3 +17,6 @@ Dotfiles from my Manjaro installation
  - [rofi](https://www.archlinux.org/packages/community/x86_64/rofi/): application launcher
  - [spicetify](https://aur.archlinux.org/packages/spicetify-cli): modify spotify's styles
  - [xidlehook](https://aur.archlinux.org/packages/xidlehook/): auto lock the screen
+ - [flameshot](https://www.archlinux.org/packages/community/x86_64/flameshot/): screenshot tool
+ - [blueman](https://www.archlinux.org/packages/community/x86_64/blueman/): bluetooth manager
+

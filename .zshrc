@@ -69,6 +69,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     extract
+    z
 )
 
 source $ZSH/oh-my-zsh.sh
