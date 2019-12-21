@@ -1,6 +1,6 @@
 #!/bin/sh
 
-intern=eDP1
+intern=eDP-1
 extern=HDMI1
 
 if xrandr | grep "$extern connected"; then

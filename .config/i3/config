@@ -37,6 +37,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'" 
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
+# Screenshot bindings
+bindsym Print exec "flameshot gui -p $HOME/Pictures/Screenshots"
+bindsym Shift+Print exec "flameshot full -p $HOME/Pictures/Screenshots"
+
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
@@ -238,5 +242,5 @@ bindsym $mod+x exec $HOME/scripts/lockscreen.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # set xinput props
-exec_always --no-startup-id "xinput set-prop 'SYNA7DB5:00 06CB:7DB7 Touchpad' 303 1"
-exec_always --no-startup-id "xinput set-prop 'SYNA7DB5:00 06CB:7DB7 Touchpad' 311 1"
+exec_always --no-startup-id "xinput set-prop 'SYNA7DB5:00 06CB:7DB7 Touchpad' 305 1" # Enable natural scrolling
+exec_always --no-startup-id "xinput set-prop 'SYNA7DB5:00 06CB:7DB7 Touchpad' 321 1" # Enable tapping

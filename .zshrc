@@ -69,7 +69,6 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     extract
-    z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -112,3 +111,8 @@ alias cat="bat"
 
 # Preferred terminal
 export TERMINAL='kitty'
+
+# Install globally to user (without sudo)
+PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix="$HOME/.node_modules"
+
