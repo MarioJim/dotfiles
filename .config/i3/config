@@ -236,7 +236,7 @@ exec --no-startup-id feh --randomize --bg-fill $HOME/Pictures/WPs/*
 
 # add i3lock
 exec --no-startup-id $HOME/scripts/autoLockscreen.sh
-bindsym $mod+x exec $HOME/scripts/lockscreen.sh
+bindsym $mod+x exec $HOME/scripts/lock.sh
 
 # run polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

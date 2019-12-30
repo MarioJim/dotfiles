@@ -1,2 +1,7 @@
 #!/bin/sh
-xidlehook --not-when-fullscreen --not-when-audio --timer normal 600 'i3lock-fancier-rapid 8 4' '' &
+
+xidlehook \
+    --not-when-fullscreen                           \
+    --not-when-audio                                \
+    --timer 300 '~/scripts/lock.sh' ''              \
+    --timer 900 'systemctl suspend-then-hibernate' ''

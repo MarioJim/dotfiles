@@ -27,5 +27,6 @@ Dotfiles from my Arch Linux installation
 
 ## Fonts
  - [otf-fira-code](https://www.archlinux.org/packages/community/any/otf-fira-code/): terminal
- - [otf-inter](https://aur.archlinux.org/packages/otf-inter/): polybar, rofi and dunst
+ - [ttf-google-sans](https://aur.archlinux.org/packages/ttf-google-sans/): rofi and dunst
+ - [otf-inter](https://aur.archlinux.org/packages/otf-inter/): polybar
  - [ttf-font-awesome-4](https://aur.archlinux.org/packages/otf-font-awesome-4/): polybar

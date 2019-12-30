@@ -10,7 +10,7 @@ configuration {
     background-color: #00000050;
     border-color: #00000000;
     text-color: #EFEFEF;
-    font: "Inter 15";
+    font: "Google Sans 14";
 }
 
 #window {
