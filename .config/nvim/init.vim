@@ -20,7 +20,7 @@ colorscheme one
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
 
-set expandtab
+set expandtab ts=4 sw=4 ai
 set smarttab
 set tabstop=4
 set softtabstop=4

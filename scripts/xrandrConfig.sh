@@ -1,10 +1,10 @@
 #!/bin/sh
 
-intern=eDP-1
-extern=HDMI-1
-
-if xrandr | grep "$extern connected"; then
-    xrandr --output "$intern" --auto --pos 320x1080 --output "$extern" --auto --pos 0x0
+if xrandr | grep "$EDISP connected 2560x1080"; then
+    xrandr --output "$IDISP" --auto --pos 320x1080 --output "$EDISP" --auto --pos 0x0
+elif xrandr | grep "$EDISP connected 1920x1080"; then
+    xrandr --output "$IDISP" --auto --output "$EDISP" --auto --right-of "$IDISP"
 else
-    xrandr --output "$intern" --auto
+    xrandr --output "$IDISP" --auto
 fi
+

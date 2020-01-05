@@ -25,14 +25,14 @@ i3lock \
     \
     --clock			            \
     --timecolor=eceff4ff	    \
-    --timestr="%H:%M"		    \
+    --timestr="%I:%M %P"		    \
     --time-font="Google Sans"   \
     --timesize=54		        \
     --time-align=1		        \
     --timepos="ix+60:iy+4"		\
     \
     --datecolor=eceff4ff	    \
-    --datestr="%A, %d %B"	    \
+    --datestr="%A, %e %B"	    \
     --date-font="Google Sans"   \
     --datesize=24		        \
     --datepos="ix+60:iy+36"	    \
