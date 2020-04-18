@@ -3,7 +3,7 @@ Dotfiles from my Arch Linux installation
 
 ## Window manager
  - [i3-gaps](https://github.com/Airblader/i3): tiling window manager
- - [picom](https://github.com/yshui/picom): compositor with blur
+ - [picom-tryone-git](https://aur.archlinux.org/packages/picom-tryone-git): compositor with kawase blur
  - [polybar](https://github.com/polybar/polybar): i don't like i3status
  - [polybar-spotify-git](https://github.com/Jvanrhijn/polybar-spotify): show the currently playing song as a module
 
@@ -28,5 +28,5 @@ Dotfiles from my Arch Linux installation
 ## Fonts
  - [otf-fira-code](https://www.archlinux.org/packages/community/any/otf-fira-code/): terminal
  - [ttf-google-sans](https://aur.archlinux.org/packages/ttf-google-sans/): rofi and dunst
- - [otf-inter](https://aur.archlinux.org/packages/otf-inter/): polybar
- - [ttf-font-awesome-4](https://aur.archlinux.org/packages/otf-font-awesome-4/): polybar
+ - [inter-font](https://www.archlinux.org/packages/community/any/inter-font/): polybar
+ - [otf-font-awesome](https://www.archlinux.org/packages/community/any/otf-font-awesome/): polybar

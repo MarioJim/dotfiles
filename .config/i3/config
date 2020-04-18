@@ -3,7 +3,7 @@
 set $mod Mod1
 
 # font for window titles
-font pango:Google Sans 12
+font pango:Inter 11
 
 # arrow keys alternative
 set $left h
@@ -27,8 +27,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # screen brightness controls
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send ' brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send ' brightness down'"
 
 # screenshot bindings
 bindsym Print exec "flameshot gui -p $HOME/Pictures/Screenshots"
@@ -49,10 +49,10 @@ bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
-bindsym $mod+Left focus left
+#bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+#bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+$left move left
@@ -169,22 +169,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# external displays
-set $mode_display Displays: (vim keys) move HDMI, (p) disable HDMI 
-mode "$mode_display" {
-    bindsym $left   exec --no-startup-id xrandr --output $EDISP --auto --left-of $IDISP, mode "default"
-    bindsym $down   exec --no-startup-id xrandr --output $EDISP --auto --below $IDISP, mode "default"
-    bindsym $up     exec --no-startup-id xrandr --output $EDISP --auto --above $IDISP, mode "default"
-    bindsym $right  exec --no-startup-id xrandr --output $EDISP --auto --right-of $IDISP, mode "default"
-    bindsym p exec --no-startup-id xrandr --output $EDISP --auto --off, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-    bindsym $mod+p mode "default"
-}
-bindsym $mod+p mode "$mode_display"
-
 # i3lock keyboard shortcut
 bindsym $mod+x exec $HOME/scripts/lock.sh
 
@@ -204,7 +188,7 @@ exec --no-startup-id $HOME/scripts/xrandrConfig.sh
 exec_always --no-startup-id feh --no-fehbg --randomize --bg-fill $HOME/Pictures/WPs/*
 
 # run startup and tray programs
-exec --no-startup-id picom --experimental-backends &
+exec_always --no-startup-id picom --experimental-backends -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id nm-applet &
 exec --no-startup-id dunst &
