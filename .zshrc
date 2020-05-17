@@ -45,6 +45,7 @@ SAVEHIST=100000
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 alias ls="exa -al"
 alias cat="bat"
+alias zat="zathura --fork"
 
 # show hidden files in autocomplete
 setopt globdots

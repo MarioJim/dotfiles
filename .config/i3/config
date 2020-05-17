@@ -153,14 +153,14 @@ mode "resize" {
     bindsym Right       resize grow width 5 px or 5 ppt
 
     # Resize more finely
-    bindsym Ctrl+$left       resize shrink width 1 px or 1 ppt
-    bindsym Ctrl+$down       resize grow height 1 px or 1 ppt
-    bindsym Ctrl+$up         resize shrink height 1 px or 1 ppt
-    bindsym Ctrl+$right      resize grow width 1 px or 1 ppt
-    bindsym Ctrl+Left        resize shrink width 1 px or 1 ppt
-    bindsym Ctrl+Down        resize grow height 1 px or 1 ppt
-    bindsym Ctrl+Up          resize shrink height 1 px or 1 ppt
-    bindsym Ctrl+Right       resize grow width 1 px or 1 ppt
+    bindsym Shift+$left       resize shrink width 1 px or 1 ppt
+    bindsym Shift+$down       resize grow height 1 px or 1 ppt
+    bindsym Shift+$up         resize shrink height 1 px or 1 ppt
+    bindsym Shift+$right      resize grow width 1 px or 1 ppt
+    bindsym Shift+Left        resize shrink width 1 px or 1 ppt
+    bindsym Shift+Down        resize grow height 1 px or 1 ppt
+    bindsym Shift+Up          resize shrink height 1 px or 1 ppt
+    bindsym Shift+Right       resize grow width 1 px or 1 ppt
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -192,7 +192,6 @@ exec_always --no-startup-id picom --experimental-backends -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id nm-applet &
 exec --no-startup-id dunst &
-exec --no-startup-id redshift &
 exec --no-startup-id libinput-gestures &
 exec --no-startup-id flameshot &
 exec --no-startup-id blueman-applet &
