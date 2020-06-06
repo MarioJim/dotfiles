@@ -32,7 +32,7 @@ i3lock \
     --timepos="ix+60:iy+4"		\
     \
     --datecolor=eceff4ff	    \
-    --datestr="%A, %e %B"	    \
+    --datestr="%A, %B %e"	    \
     --date-font="Google Sans"   \
     --datesize=24		        \
     --datepos="ix+60:iy+36"	    \
