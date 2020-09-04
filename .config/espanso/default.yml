@@ -61,3 +61,5 @@ matches:
   - trigger: "'?"
     replace: "¿"
 
+  - trigger: "MJA"
+    replace: "Mario Emilio Jiménez Vizcaíno A01173359"

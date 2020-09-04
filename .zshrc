@@ -1,3 +1,4 @@
+DISABLE_MAGIC_FUNCTIONS=true
 export ZSH=$HOME/.config/oh-my-zsh
 
 ZSH_THEME="agnoster"
@@ -20,6 +21,9 @@ alias ls="exa -al"
 alias cat="bat"
 alias zat="zathura --fork"
 alias clip="xclip -selection clipboard"
+
+# add my scripts to PATH
+PATH="$HOME/scripts:$PATH"
 
 # show hidden files in autocomplete
 setopt globdots
