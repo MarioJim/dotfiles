@@ -14,6 +14,7 @@ set $right l
 # program shortcuts
 bindsym $mod+Return exec kitty
 bindsym $mod+d exec "rofi -modi drun,window -show"
+bindsym $mod+grave exec "rofi -show window -mode window -window-thumbnail"
 bindsym $mod+n exec chromium
 bindsym $mod+Shift+n exec chromium --incognito
 

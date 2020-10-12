@@ -3,9 +3,8 @@ Dotfiles from my Arch Linux installation
 
 ## Window manager
  - [i3-gaps](https://github.com/Airblader/i3): tiling window manager
- - [picom-tryone-git](https://aur.archlinux.org/packages/picom-tryone-git): compositor with kawase blur
- - [polybar](https://github.com/polybar/polybar): i don't like i3status
- - [polybar-spotify-git](https://github.com/Jvanrhijn/polybar-spotify): show the currently playing song as a module
+ - [picom](https://github.com/yshui/picom): compositor with kawase blur
+ - [polybar](https://github.com/polybar/polybar): way better than i3status
 
 ## Terminal
  - [kitty](https://github.com/kovidgoyal/kitty): terminal emulator

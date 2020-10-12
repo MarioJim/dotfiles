@@ -49,7 +49,7 @@ font-0 = "Inter:pixelsize=12;1"
 font-1 = "Font Awesome 5 Free Solid:pixelsize=12;1"
 font-2 = "Source Code Pro:pixelsize=11;1"
 
-modules-left = i3 spotify
+modules-left = i3 playerctl
 modules-center = date
 modules-right = wlan xbacklight pulseaudio memory cpu battery
 
@@ -102,11 +102,11 @@ label-urgent-padding = 2
 
 label-separator = |
 
-[module/spotify]
+[module/playerctl]
 type = custom/script
 interval = 1
 format = <label>
-exec = python /usr/share/polybar/scripts/spotify_status.py -t 60 -f '{play_pause} {song} - {artist}' -p ' , '
+exec = ~/scripts/playerctl-status.sh
 
 [module/xbacklight]
 type = internal/xbacklight
