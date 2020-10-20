@@ -31,11 +31,16 @@ setopt globdots
 # redefine prompt_context for hiding user@hostname
 prompt_context () { }
 
-export EDITOR='nvim'
-export TERMINAL='kitty'
-export IDISP='eDP1' EDISP='HDMI1'
+EDITOR='nvim'
+TERMINAL='kitty'
+IDISP='eDP1'
+EDISP='HDMI1'
 
 # Install node modules globally to user (without sudo)
 PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix="$HOME/.node_modules"
+
+function fp() {
+    fuzzy-pdf "$1" "zathura {} --find={q}"
+}
 

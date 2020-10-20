@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-source /home/mario/.zshrc
+source "$HOME/.zshrc"
 
 if xrandr | grep -A 1 "$EDISP connected" | grep "2560x1080"; then
     xrandr --output "$IDISP" --auto --pos 320x1080 --output "$EDISP" --auto --pos 0x0

@@ -1,18 +1,18 @@
 #!/bin/sh
 
 if currstatus=$(playerctl status 2>&1); then
-    case $currstatus in
+    case $(echo "$currstatus" | tail -1) in
         Playing)
             statusicon=" "
             ;;
-        Paused)
+        Paused | Stopped)
             statusicon=" "
             ;;
         *)
             statusicon="? "
             ;;
     esac
-    currplaying=$(playerctl metadata --format "{{title}} - {{artist}}" 2>&1)
+    currplaying=$(playerctl metadata --format "{{title}} - {{artist}}" 2>&1 | tail -1)
     echo "$statusicon" "$currplaying"
 else
     echo
