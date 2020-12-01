@@ -186,19 +186,10 @@ for_window [class="jetbrains-.*" title="win0"] floating enable
 # verify monitor config
 exec --no-startup-id $HOME/scripts/xrandrConfig.sh
 
-# run wallpaper setter
-exec_always --no-startup-id feh --no-fehbg --randomize --bg-fill $HOME/Pictures/Wallpapers/*
-
 # run startup and tray programs
 exec_always --no-startup-id picom --experimental-backends -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id nm-applet &
 exec --no-startup-id dunst &
-exec --no-startup-id touchegg --client &
-exec --no-startup-id touchegg-music-client &
 exec --no-startup-id flameshot &
 exec --no-startup-id $HOME/scripts/autoLockscreen.sh
-
-for_window [class="Spotify"] move to workspace "$ws1"
-exec --no-startup-id spotify &
 
