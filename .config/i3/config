@@ -198,6 +198,3 @@ exec --no-startup-id flameshot &
 exec --no-startup-id blueman-applet &
 exec --no-startup-id $HOME/scripts/autoLockscreen.sh
 
-for_window [class="Spotify"] move to workspace "$ws1"
-exec --no-startup-id spotify &
-

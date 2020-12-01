@@ -51,7 +51,7 @@ font-2 = "Source Code Pro:pixelsize=11;1"
 
 modules-left = i3 playerctl
 modules-center = date
-modules-right = wlan xbacklight pulseaudio memory cpu battery
+modules-right = wlan pulseaudio memory cpu
 
 tray-position = right
 tray-padding = 5
@@ -141,7 +141,7 @@ label = %percentage:2%%
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = enp2s0
 interval = 2
 
 format-connected = <label-connected>
