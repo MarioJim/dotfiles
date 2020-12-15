@@ -53,13 +53,11 @@ EDISP='HDMI1'
 
 # Python user installed modules
 PATH="$HOME/.local/bin:$PATH"
+# Go user installed modules
+PATH="$HOME/go/bin:$PATH"
 # Install node modules globally to user (without sudo)
 PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix="$HOME/.node_modules"
-
-# Jetbrains JDK
-export IDEA_JDK=/usr/lib/jvm/jre-jetbrains
-export CL_JDK=/usr/lib/jvm/jre-jetbrains
 
 function fp() {
     fuzzy-pdf "$1" "zathura {} --find={q}"

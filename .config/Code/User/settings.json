@@ -1,0 +1,68 @@
+{
+  "debug.openDebug": "openOnDebugBreak",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'Fira Code Retina', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.rulers": [100],
+  "editor.wordWrap": "on",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "update.mode": "manual",
+  "window.menuBarVisibility": "toggle",
+  "workbench.colorTheme": "Plastic - deprioritised punctuation",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "pdf.preview",
+      "filenamePattern": "*.pdf"
+    }
+  ],
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "[dart]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "dart.debugExternalLibraries": false,
+  "dart.debugSdkLibraries": false,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "go.useLanguageServer": true,
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "python.showStartPage": true,
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer"
+  },
+  "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescriptreact]": {
+    "editor.tabSize": 2
+  }
+}
