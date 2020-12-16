@@ -20,11 +20,12 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-alias ls="exa -al"
 alias cat="bat"
-alias zat="zathura --fork"
 alias clip="xclip -selection clipboard"
+alias fp="fuzzy-pdf . \"zathura {} --find={q}\""
+alias ls="exa -al"
 alias yy="yay -Syu --devel"
+alias zat="zathura --fork"
 
 # add my scripts to PATH
 PATH="$HOME/scripts:$PATH"
@@ -46,6 +47,36 @@ rationalise-dot() {
 zle -N rationalise-dot
 bindkey . rationalise-dot
 
+# Clone repo in ~/GitHub/$USER/$REPO and cd into it
+unalias gcl
+gcl() {
+    if [ "$#" -ne 1 ]; then
+        echo "Usage: $0 REPO" >&2
+        return 1
+    fi
+
+    # Try extracting the directory with the git protocol first
+    DIR=$(echo "$1" | sed 's/git@.*:\(.*\)\.git/\1/')
+    if [ "$1" = "$DIR" ]; then
+        # Try extracting it with the http protocol
+        DIR=$(echo "$1" | sed 's/https\?:\/\/.*:\(.*\)\.git/\1/')
+    fi
+    if [ "$1" = "$DIR" ]; then
+        # Else, exit the function
+        echo "Git protocol not recognized, aborting..."  >&2
+        return 1
+    fi
+
+    ABS_DIR="$HOME/GitHub/$DIR"
+    if [ -d "$ABS_DIR" ]; then
+        echo "Repository already exists"
+    else
+        git clone --recurse-submodules "$1" "$ABS_DIR"
+    fi
+
+    cd "$ABS_DIR" || return 1
+}
+
 export EDITOR='nvim'
 TERMINAL='kitty'
 IDISP='eDP1'
@@ -58,10 +89,6 @@ PATH="$HOME/go/bin:$PATH"
 # Install node modules globally to user (without sudo)
 PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix="$HOME/.node_modules"
-
-function fp() {
-    fuzzy-pdf "$1" "zathura {} --find={q}"
-}
 
 # Must be at the end of the .zshrc file
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
