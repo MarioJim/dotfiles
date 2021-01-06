@@ -59,7 +59,7 @@ gcl() {
     DIR=$(echo "$1" | sed 's/git@.*:\(.*\)\.git/\1/')
     if [ "$1" = "$DIR" ]; then
         # Try extracting it with the http protocol
-        DIR=$(echo "$1" | sed 's/https\?:\/\/.*:\(.*\)\.git/\1/')
+        DIR=$(echo "$1" | sed 's/https\?:\/\/.*\/\(.*\/.*\)\.git/\1/')
     fi
     if [ "$1" = "$DIR" ]; then
         # Else, exit the function
