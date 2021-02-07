@@ -24,7 +24,8 @@ alias cat="bat"
 alias clip="xclip -selection clipboard"
 alias fp="fuzzy-pdf . \"zathura {} --find={q}\""
 alias ls="exa -al"
-alias yy="yay -Syu --devel"
+alias yay="paru"
+alias yy="paru -Syu --devel"
 alias zat="zathura --fork"
 
 # add my scripts to PATH
@@ -89,6 +90,13 @@ PATH="$HOME/go/bin:$PATH"
 # Install node modules globally to user (without sudo)
 PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix="$HOME/.node_modules"
+# Android vars
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Must be at the end of the .zshrc file
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
