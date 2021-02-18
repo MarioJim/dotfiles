@@ -24,7 +24,6 @@ alias cat="bat"
 alias clip="xclip -selection clipboard"
 alias fp="fuzzy-pdf . \"zathura {} --find={q}\""
 alias ls="exa -al"
-alias yay="paru"
 alias yy="paru -Syu --devel"
 alias zat="zathura --fork"
 
