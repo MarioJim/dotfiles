@@ -13,9 +13,13 @@
   "explorer.confirmDelete": false,
   "git.confirmSync": false,
   "git.autofetch": true,
+  "keyboard.dispatch": "keyCode",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "update.mode": "manual",
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/bin/nvim",
+  "vim.useSystemClipboard": true,
   "window.menuBarVisibility": "toggle",
   "workbench.colorTheme": "Plastic - deprioritised punctuation",
   "workbench.editorAssociations": [
@@ -39,12 +43,22 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
   },
+  "[css]": {
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": ["document"],
+    "editor.tabSize": 2
+  },
   "dart.debugExternalLibraries": false,
   "dart.debugSdkLibraries": false,
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
   "go.useLanguageServer": true,
+  "[html]": {
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": ["document"],
+    "editor.tabSize": 2
+  },
   "[javascript]": {
     "editor.tabSize": 2
   },
@@ -56,7 +70,6 @@
   "[rust]": {
     "editor.defaultFormatter": "matklad.rust-analyzer"
   },
-  "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
   "rust-analyzer.checkOnSave.command": "clippy",
   "[typescript]": {
     "editor.tabSize": 2

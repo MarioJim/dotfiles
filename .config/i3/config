@@ -15,8 +15,8 @@ set $right l
 bindsym $mod+Return exec kitty
 bindsym $mod+d exec "rofi -modi drun,window -show"
 bindsym $mod+grave exec "rofi -show window -mode window -window-thumbnail"
-bindsym $mod+n exec chromium
-bindsym $mod+Shift+n exec chromium --incognito
+bindsym $mod+n exec google-chrome-beta
+bindsym $mod+Shift+n exec google-chrome-beta --incognito
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -41,7 +41,7 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym $mod+period exec playerctl play-pause
+bindsym $mod+period exec playerctl -p spotify play-pause
 bindsym $mod+slash exec playerctl next
 bindsym $mod+comma exec playerctl previous
 
@@ -194,6 +194,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id nm-applet &
 exec --no-startup-id dunst &
 exec --no-startup-id touchegg --client &
+exec --no-startup-id touchegg-music-client &
 exec --no-startup-id flameshot &
 exec --no-startup-id blueman-applet &
 exec --no-startup-id $HOME/scripts/autoLockscreen.sh

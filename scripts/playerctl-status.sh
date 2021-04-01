@@ -13,7 +13,7 @@ if currstatus=$(playerctl status 2>&1); then
             ;;
     esac
     currplaying=$(playerctl metadata --format "{{title}} - {{artist}}" 2>&1 | tail -1)
-    echo "$statusicon" "$currplaying"
+    echo "$statusicon" "${currplaying:0:80}"
 else
     echo
     exit
