@@ -13,7 +13,7 @@ set $right l
 
 # program shortcuts
 bindsym $mod+Return exec kitty
-bindsym $mod+d exec "rofi -modi drun,window -show"
+bindsym $mod+d exec "rofi -modi drun,window -show drun"
 bindsym $mod+grave exec "rofi -show window -mode window -window-thumbnail"
 bindsym $mod+n exec google-chrome-beta
 bindsym $mod+Shift+n exec google-chrome-beta --incognito
@@ -186,7 +186,7 @@ for_window [class="jetbrains-.*" title="win0"] floating enable
 exec --no-startup-id $HOME/scripts/xrandrConfig.sh
 
 # run wallpaper setter
-exec_always --no-startup-id feh --no-fehbg --randomize --bg-fill $HOME/Pictures/WPs/*
+exec_always --no-startup-id feh --no-fehbg --randomize --bg-fill $HOME/Pictures/Wallpapers/*
 
 # run startup and tray programs
 exec_always --no-startup-id picom --experimental-backends -b

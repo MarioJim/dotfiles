@@ -1,5 +1,4 @@
 call plug#begin('~/.local/share/nvim/plugged')
-
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'sheerun/vim-polyglot'

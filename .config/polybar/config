@@ -51,26 +51,13 @@ font-2 = "Source Code Pro:pixelsize=11;1"
 
 modules-left = i3 playerctl
 modules-center = date
-modules-right = wlan xbacklight pulseaudio memory cpu battery
+modules-right = download upload backlight volume memory swap cpu battery
 
 tray-position = right
 tray-padding = 5
 
 cursor-click = pointer
 cursor-scroll = ns-resize
-
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-label-mounted = root: %percentage_used%%
-label-unmounted = root not mounted
 
 [module/i3]
 type = internal/i3
@@ -104,26 +91,57 @@ label-separator = |
 
 [module/playerctl]
 type = custom/script
-interval = 1
-format = <label>
+interval = 2
 exec = ~/scripts/playerctl-status.sh
+click-left = playerctl -p spotify play-pause
 
-[module/xbacklight]
+[module/date]
+type = internal/date
+date = "%A %d, %B %Y"
+time = %I:%M %P
+label = %time% - %date%
+
+[module/download]
+type = internal/network
+interface = wlp3s0
+interval = 2
+
+format-connected =  <label-connected>
+label-connected-foreground = ${root.foreground}
+label-connected = %downspeed%
+format-connected-foreground = ${colors.foreground-alt}
+
+format-disconnected = <label-disconnected>
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/upload]
+type = internal/network
+interface = wlp3s0
+interval = 2
+
+format-connected =  <label-connected>
+label-connected-foreground = ${root.foreground}
+label-connected = %upspeed%
+format-connected-foreground = ${colors.foreground-alt}
+format-disconnected = ""
+
+[module/backlight]
 type = internal/xbacklight
+format =   <label>
+format-foreground = ${colors.foreground-alt}
+label = %percentage%%
+label-foreground = ${root.foreground}
 
-format = <label> <bar>
-label = " "
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
+[module/volume]
+type = internal/pulseaudio
+format-volume =   <label-volume>
+format-volume-foreground = ${colors.foreground-alt}
+label-volume = %percentage%%
+label-volume-foreground = ${root.foreground}
+label-muted = muted
+label-muted-foreground = ${colors.foreground-alt}
+click-right = pavucontrol
 
 [module/memory]
 type = internal/memory
@@ -132,63 +150,19 @@ format-prefix = "mem: "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage_used%%
 
+[module/swap]
+type = internal/memory
+interval = 2
+format-prefix = "swp: "
+format-prefix-foreground = ${colors.foreground-alt}
+label = %percentage_swap_used%%
+
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = "cpu: "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage:2%%
-
-[module/wlan]
-type = internal/network
-interface = wlp3s0
-interval = 2
-
-format-connected = <label-connected>
-label-connected =  %downspeed%   %upspeed%
-
-format-disconnected = <label-disconnected>
-label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.foreground-alt}
-
-[module/date]
-type = internal/date
-interval = 5
-
-date = "%A %d, %B %Y"
-date-alt = "%Y-%m-%d"
-
-time = %I:%M %P
-time-alt = %I:%M:%S %P
-
-label = %time% - %date% 
-
-[module/pulseaudio]
-type = internal/pulseaudio
-
-format-volume = <label-volume> <bar-volume>
-label-volume = " "
-label-volume-foreground = ${root.foreground}
-
-label-muted =   muted
-label-muted-foreground = ${root.foreground}
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery

@@ -47,7 +47,7 @@ rationalise-dot() {
 zle -N rationalise-dot
 bindkey . rationalise-dot
 
-# Clone repo in ~/GitHub/$USER/$REPO and cd into it
+# Clone repo in ~/git/$USER/$REPO and cd into it
 unalias gcl
 gcl() {
     if [ "$#" -ne 1 ]; then
@@ -67,7 +67,7 @@ gcl() {
         return 1
     fi
 
-    ABS_DIR="$HOME/GitHub/$DIR"
+    ABS_DIR="$HOME/git/$DIR"
     if [ -d "$ABS_DIR" ]; then
         echo "Repository already exists"
     else
@@ -96,6 +96,7 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export CHROME_EXECUTABLE=google-chrome-beta
 
 # Must be at the end of the .zshrc file
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

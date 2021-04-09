@@ -1,7 +1,8 @@
 configuration {
-    display-drun:                   "Apps";
-    display-window:                 "Window";
-    show-icons:true;
+    display-drun:       "Apps";
+    display-window:     "Window";
+    show-icons:         true;
+    drun-match-fields:  "name,exec";
 }
 
 * {
@@ -10,7 +11,7 @@ configuration {
     background-color: #00000040;
     border-color: #00000000;
     text-color: #EFEFEF;
-    font: "Google Sans 14";
+    font: "Product Sans 14";
 }
 
 #window {

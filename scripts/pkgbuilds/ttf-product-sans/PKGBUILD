@@ -1,0 +1,19 @@
+# Maintainer: Mario Jiménez <mario.emilio.j@gmail.com>
+
+pkgname=ttf-product-sans
+pkgver=1
+pkgrel=1
+
+pkgdesc="Google's signature family of fonts"
+url='https://befonts.com/product-sans-font.html'
+arch=('any')
+license=('Comercial')
+
+depends=('fontconfig')
+
+source=(product-sans.zip::https://befonts.com/wp-content/uploads/2018/08/product-sans.zip)
+sha256sums=('d7742d39822c6c78962f9acc2030f0e3aa226efcc873edd915679338d3fd60a1')
+
+package() {
+  install -Dm644 *.ttf -t "$pkgdir"/usr/share/fonts/TTF
+}
