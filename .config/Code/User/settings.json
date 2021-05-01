@@ -26,6 +26,10 @@
     {
       "viewType": "pdf.preview",
       "filenamePattern": "*.pdf"
+    },
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
     }
   ],
   "workbench.iconTheme": "material-icon-theme",
@@ -66,11 +70,13 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
   },
-  "python.showStartPage": true,
+  "python.showStartPage": false,
+  "python.formatting.autopep8Path": "/usr/bin/autopep8",
   "[rust]": {
     "editor.defaultFormatter": "matklad.rust-analyzer"
   },
   "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
   "[typescript]": {
     "editor.tabSize": 2
   },

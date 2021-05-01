@@ -2,3 +2,6 @@
 clear lock
 keycode 66 = Escape NoSymbol Escape
 
+! Disable middle click selection paste
+pointer = 1 0 3
+

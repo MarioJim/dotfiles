@@ -24,7 +24,7 @@ alias cat="bat"
 alias clip="xclip -selection clipboard"
 alias fp="fuzzy-pdf . \"zathura {} --find={q}\""
 alias ls="exa -al"
-alias pp="paru -Syu --devel"
+alias pp="paru"
 alias zat="zathura --fork"
 
 # add my scripts to PATH
@@ -46,6 +46,9 @@ rationalise-dot() {
 }
 zle -N rationalise-dot
 bindkey . rationalise-dot
+
+# Enable vi-mode
+bindkey -v
 
 # Clone repo in ~/git/$USER/$REPO and cd into it
 unalias gcl
@@ -82,6 +85,9 @@ TERMINAL='kitty'
 IDISP='eDP1'
 EDISP='HDMI1'
 
+# Fix GPG GUIs
+export GPG_TTY=$(tty)
+
 # Python user installed modules
 PATH="$HOME/.local/bin:$PATH"
 # Go user installed modules
@@ -96,7 +102,7 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export CHROME_EXECUTABLE=google-chrome-beta
+export CHROME_EXECUTABLE=google-chrome-stable
 
 # Must be at the end of the .zshrc file
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
