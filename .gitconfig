@@ -2,6 +2,9 @@
 	editor = nvim
 	autocrlf = false
 
+[color]
+	ui = auto
+
 [user]
 	email = mario.emilio.j@gmail.com
 	name = MarioJim

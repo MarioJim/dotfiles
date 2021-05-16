@@ -34,7 +34,7 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send ' brightn
 # screenshot bindings
 bindsym Print exec "flameshot gui -p $HOME/Pictures/Screenshots"
 bindsym Shift+Print exec "flameshot full -p $HOME/Pictures/Screenshots"
-bindsym Control+Print exec "$HOME/.local/bin/normcap -l spa"
+bindsym Control+Print exec "normcap -l spa"
 
 # media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -195,7 +195,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id nm-applet &
 exec --no-startup-id dunst &
 exec --no-startup-id touchegg --client &
-exec --no-startup-id touchegg-music-client &
+exec --no-startup-id sleep 1 && touchegg-music-client &
 exec --no-startup-id flameshot &
 exec --no-startup-id $HOME/scripts/autoLockscreen.sh
 

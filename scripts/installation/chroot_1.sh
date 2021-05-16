@@ -63,4 +63,20 @@ EOL
 # Enable NetworkManager service
 systemctl enable --now NetworkManager
 
+# Enable infinite ligatures in kitty with Fira Code
+cat >> /etc/fonts/conf.d/80-firacode-spacing.conf <<EOL
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+  <match target="scan">
+    <test name="family">
+      <string>Fira Code</string>
+    </test>
+    <edit name="spacing">
+      <int>100</int>
+    </edit>
+  </match>
+</fontconfig>
+EOL
 
+fc-cache -vf
