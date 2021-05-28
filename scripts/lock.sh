@@ -3,41 +3,41 @@
 # Based on https://github.com/lokesh-krishna/dotfiles/blob/master/nord-v2/bin/lock.sh
 
 i3lock \
-    --nofork                    \
-    --ignore-empty-password     \
+    --nofork                     \
+    --ignore-empty-password      \
     \
-    --indicator                 \
-    --linecolor=00000000        \
-    --keyhlcolor=5e81acff       \
-    --bshlcolor=bf616aff        \
-    --separatorcolor=00000000   \
-    --radius=32                 \
-    --ring-width=7              \
-    --indpos="100:980"          \
+    --indicator                  \
+    --line-color=00000000        \
+    --keyhl-color=5e81acff       \
+    --bshl-color=bf616aff        \
+    --separator-color=00000000   \
+    --radius=32                  \
+    --ring-width=7               \
+    --ind-pos="100:980"          \
     \
-    --insidevercolor=00000000   \
-    --insidewrongcolor=00000000 \
-    --insidecolor=00000000      \
+    --inside-color=00000000      \
+    --insidever-color=00000000   \
+    --insidewrong-color=00000000 \
     \
-    --ringcolor=eceff4ff        \
-    --ringvercolor=6dab3cff     \
-    --ringwrongcolor=bf616aff   \
+    --ring-color=eceff4ff        \
+    --ringver-color=6dab3cff     \
+    --ringwrong-color=bf616aff   \
     \
-    --clock                     \
-    --timecolor=eceff4ff        \
-    --timestr="%I:%M %P"        \
-    --time-font="Product Sans"  \
-    --timesize=54               \
-    --time-align=1              \
-    --timepos="ix+60:iy+4"      \
+    --clock                      \
+    --time-color=eceff4ff        \
+    --time-str="%I:%M %P"        \
+    --time-font="Product Sans"   \
+    --time-size=54               \
+    --time-pos="ix+60:iy+4"      \
+    --time-align=1               \
     \
-    --datecolor=eceff4ff        \
-    --datestr="%A, %B %e"       \
-    --date-font="Product Sans"  \
-    --datesize=24               \
-    --datepos="ix+60:iy+36"     \
-    --date-align=1              \
+    --date-color=eceff4ff        \
+    --date-str="%A, %B %e"       \
+    --date-font="Product Sans"   \
+    --date-size=24               \
+    --date-pos="ix+60:iy+36"     \
+    --date-align=1               \
     \
-    --veriftext=""              \
-    --wrongtext=""              \
-    --blur=1
+    --verif-text=""              \
+    --wrong-text=""              \
+    --color=00000000
