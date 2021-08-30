@@ -3,80 +3,44 @@ configuration {
     display-window:     "Window";
     show-icons:         true;
     drun-match-fields:  "name,exec";
+    drun-display-format:  "{name} [<span weight='light' size='x-small'>{exec}</span>]";
 }
 
+@theme "glue_pro_blue"
+
 * {
-    lines: 15;
-    columns: 1;
-    background-color: #00000040;
     border-color: #00000000;
-    text-color: #EFEFEF;
     font: "Product Sans 14";
 }
 
-#window {
+window {
+    background-color: #00000040;
     border: 0;
     border-radius: 12px;
-    padding: 30;
-    width: 40%;
+    padding: 30px;
+    width: 30%;
     height: 50%;
 }
 
-#mainbox {
-    background-color: #00000000;
-    children: [inputbar, listview];
+mainbox {
     spacing: 10px;
-    /*margin: 20%;*/
     padding: 7px 0;
-    border: 1px;
-    border-color: @base0D;
 }
 
-#listview {
-    background-color: #00000000;
-    fixed-height: 0;
-    border: 0px;
+listview {
+    border: 0;
     spacing: 5px;
     scrollbar: false;
-    padding: 10px 10px 0px;
+    padding: 10px 10px 0;
 }
 
-#element {
-    background-color: #00000000;
-    border: 0;
-    border-radius: 15px;
-    padding: 3 4 ;
+element {
+    border-radius: 12px;
+    padding: 3px 4px;
 }
 
-#element selected {
-    background-color: #00a0e6;
-    text-color: #EFEFEF;
-}
-
-#inputbar {
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
-    background-color: #00000000;
-}
-
-#case-indicator {
-    background-color: #00000000;
-    spacing:    0;
-}
-
-#entry {
-    background-color: #00000000;
-    spacing:    0;
-}
-
-#prompt {
-    background-color: #00000000;
-    spacing:    0;
-}
-
-#textbox-prompt-colon {
-    background-color: #00000000;
-    expand:     false;
-    str:        ":";
-    margin:     0px 0.3em 0em 0em ;
+element-icon {
+    size: 24;
+    margin: 0 4px 0;
 }
 

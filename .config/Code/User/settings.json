@@ -5,15 +5,18 @@
   "editor.fontFamily": "'Fira Code Retina', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.rulers": [100],
   "editor.wordWrap": "on",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
+  "extensions.ignoreRecommendations": true,
   "git.confirmSync": false,
   "git.autofetch": true,
   "keyboard.dispatch": "keyCode",
+  "plantuml.jar": "/usr/share/java/plantuml/plantuml.jar",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "update.mode": "manual",
@@ -22,18 +25,15 @@
   "vim.useSystemClipboard": true,
   "window.menuBarVisibility": "toggle",
   "workbench.colorTheme": "Plastic - deprioritised punctuation",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "pdf.preview",
-      "filenamePattern": "*.pdf"
-    },
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.pdf": "pdf.preview",
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.enableNaturalLanguageSearch": false,
+  "[bibtex]": {
+    "editor.defaultFormatter": null
+  },
   "[dart]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
@@ -67,22 +67,40 @@
     "editor.tabSize": 2
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "[latex]": {
+    "editor.defaultFormatter": null
+  },
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "tectonic",
+      "tools": ["tectonic"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "tectonic",
+      "command": "tectonic",
+      "args": ["%DOC%.tex"],
+      "env": {}
+    }
+  ],
+  "latex-workshop.view.pdf.viewer": "tab",
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
   },
-  "python.showStartPage": false,
   "python.formatting.autopep8Path": "/usr/bin/autopep8",
   "[rust]": {
     "editor.defaultFormatter": "matklad.rust-analyzer"
   },
   "rust-analyzer.checkOnSave.command": "clippy",
   "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
+  "rust-analyzer.cargo.runBuildScripts": true,
   "[typescript]": {
     "editor.tabSize": 2
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "[typescriptreact]": {
     "editor.tabSize": 2
-  },
-  "editor.linkedEditing": true
+  }
 }
