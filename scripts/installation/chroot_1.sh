@@ -8,6 +8,7 @@ hwclock --systohc
 sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
+# If using a Latam keyboard, run `loadkeys la-latin1`
 
 # Network config
 echo "arch" > /etc/hostname

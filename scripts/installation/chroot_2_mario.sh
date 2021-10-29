@@ -29,3 +29,5 @@ paru -S bottom dragon-drag-and-drop espanso fuzzy-pdf google-chrome   \
     i3lock-color neovim-plug oh-my-zsh-git picom-git polybar spotify  \
     touchegg-git ttf-google-fonts-git visual-studio-code-bin          \
     xidlehook zoom
+
+# Open nvim and install the plugins with ":PlugInstall"

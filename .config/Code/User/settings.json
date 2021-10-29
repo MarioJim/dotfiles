@@ -1,6 +1,7 @@
 {
   "debug.openDebug": "openOnDebugBreak",
   "diffEditor.ignoreTrimWhitespace": false,
+  "docker.showStartPage": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "'Fira Code Retina', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
@@ -16,9 +17,7 @@
   "git.confirmSync": false,
   "git.autofetch": true,
   "keyboard.dispatch": "keyCode",
-  "plantuml.jar": "/usr/share/java/plantuml/plantuml.jar",
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
+  "liveServer.settings.donotShowInfoMsg": true,
   "update.mode": "manual",
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/bin/nvim",
@@ -47,12 +46,14 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
   },
+  "[clojure]": {
+    "editor.defaultFormatter": null
+  },
   "[css]": {
     "editor.suggest.insertMode": "replace",
     "gitlens.codeLens.scopes": ["document"],
     "editor.tabSize": 2
   },
-  "dart.debugExternalLibraries": false,
   "dart.debugSdkLibraries": false,
   "[go]": {
     "editor.defaultFormatter": "golang.go"
@@ -81,13 +82,14 @@
     {
       "name": "tectonic",
       "command": "tectonic",
-      "args": ["%DOC%.tex"],
+      "args": ["-Zshell-escape", "%DOCFILE%.tex"],
       "env": {}
     }
   ],
   "latex-workshop.view.pdf.viewer": "tab",
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.rulers": [80]
   },
   "python.formatting.autopep8Path": "/usr/bin/autopep8",
   "[rust]": {
@@ -96,6 +98,7 @@
   "rust-analyzer.checkOnSave.command": "clippy",
   "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
   "rust-analyzer.cargo.runBuildScripts": true,
+  "rust-analyzer.files.excludeDirs": ["/target"],
   "[typescript]": {
     "editor.tabSize": 2
   },

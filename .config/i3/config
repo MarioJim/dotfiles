@@ -182,6 +182,8 @@ for_window [class=".*"] border pixel 0
 hide_edge_borders both
 # Floating Jetbrains splash
 for_window [class="jetbrains-.*" title="win0"] floating enable
+# Floating Zoom notifications
+for_window [class="zoom" title="zoom"] floating enable
 
 # verify monitor config
 exec --no-startup-id $HOME/scripts/xrandrConfig.sh

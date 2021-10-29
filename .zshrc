@@ -11,6 +11,8 @@ plugins=(
     vscode
     sudo
     extract
+    docker
+    docker-compose
 )
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
@@ -26,6 +28,9 @@ alias fp="fuzzy-pdf . \"zathura {} --find={q}\""
 alias ls="exa -al"
 alias pp="paru"
 alias zat="zathura --fork"
+if [ $TERM = "xterm-kitty" ]; then
+    alias ssh="kitty +kitten ssh"
+fi
 
 # add my scripts to PATH
 PATH="$HOME/scripts:$PATH"
