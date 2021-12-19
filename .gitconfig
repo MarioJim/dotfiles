@@ -2,18 +2,15 @@
 	editor = nvim
 	autocrlf = false
 
-[color]
-	ui = auto
+[init]
+	defaultBranch = main
 
 [user]
 	email = mario.emilio.j@gmail.com
 	name = MarioJim
 
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+[color]
+	ui = auto
 
 [pull]
 	rebase = true
@@ -21,7 +18,14 @@
 [rebase]
 	autoStash = true
 
-[init]
-	defaultBranch = main
 [credential]
-	helper = cache --timeout=3600
+    helper = cache --timeout=3600
+
+[difftool "diffpdf"]
+    cmd = diff-pdf --view \"$LOCAL\" \"$REMOTE\"
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
