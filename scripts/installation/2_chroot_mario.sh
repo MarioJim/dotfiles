@@ -25,9 +25,8 @@ popd > /dev/null
 popd > /dev/null
 
 # Install aur packages
-paru -S bottom dragon-drag-and-drop espanso fuzzy-pdf google-chrome   \
-    i3lock-color neovim-plug oh-my-zsh-git picom-git polybar spotify  \
-    touchegg-git ttf-google-fonts-git visual-studio-code-bin          \
-    xidlehook zoom
+paru -S espanso-git fuzzy-pdf google-chrome i3gaps-next-git i3lock-color      \
+    neovim-plug oh-my-zsh-git picom-git polybar spotify ttf-google-fonts-git  \
+    ttf-google-sans ttf-twemoji-color visual-studio-code-bin xidlehook zoom
 
 # Open nvim and install the plugins with ":PlugInstall"
