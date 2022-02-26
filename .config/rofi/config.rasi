@@ -10,7 +10,7 @@ configuration {
 
 * {
     border-color: #00000000;
-    font: "Google Sans 14";
+    font: "Google Sans 16";
 }
 
 window {

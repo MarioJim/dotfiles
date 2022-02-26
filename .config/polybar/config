@@ -27,7 +27,7 @@ highlight = #0A6CF5
 
 [bar/main]
 width = 100%
-height = 32
+height = 40
 fixed-center = true
 
 background = ${colors.bar-bg}
@@ -45,13 +45,13 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "Inter:pixelsize=12;1"
-font-1 = "Font Awesome 5 Free Solid:pixelsize=12;1"
-font-2 = "Source Code Pro:pixelsize=11;1"
+font-0 = "Inter:pixelsize=14;1"
+font-1 = "Font Awesome 6 Free Solid:pixelsize=14;1"
+font-2 = "Source Code Pro:pixelsize=14;1"
 
 modules-left = i3 playerctl
 modules-center = date
-modules-right = download upload backlight volume memory swap cpu battery
+modules-right = download upload backlight volume memory cpu battery
 
 tray-position = right
 tray-padding = 5
@@ -103,7 +103,7 @@ label = %time% - %date%
 
 [module/download]
 type = internal/network
-interface = wlp3s0
+interface = wlo1
 interval = 2
 
 format-connected =  <label-connected>
@@ -117,7 +117,7 @@ label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/upload]
 type = internal/network
-interface = wlp3s0
+interface = wlo1
 interval = 2
 
 format-connected =  <label-connected>
@@ -127,7 +127,8 @@ format-connected-foreground = ${colors.foreground-alt}
 format-disconnected = ""
 
 [module/backlight]
-type = internal/xbacklight
+type = internal/backlight
+card = amdgpu_bl0
 format =   <label>
 format-foreground = ${colors.foreground-alt}
 label = %percentage%%
@@ -149,13 +150,6 @@ interval = 2
 format-prefix = "mem: "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage_used%%
-
-[module/swap]
-type = internal/memory
-interval = 2
-format-prefix = "swp: "
-format-prefix-foreground = ${colors.foreground-alt}
-label = %percentage_swap_used%%
 
 [module/cpu]
 type = internal/cpu

@@ -23,13 +23,14 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 alias cat="bat"
+alias cp="rsync -ah --info=progress2"
 alias clip="xclip -selection clipboard"
 alias fp="fuzzy-pdf . \"zathura {} --find={q}\""
 alias ls="exa -al"
 alias pp="paru"
 alias zat="zathura --fork"
 alias pdfdiff="git difftool --tool=diffpdf"
-if [ $TERM = "xterm-kitty" ]; then
+if [ "$TERM" = "xterm-kitty" ]; then
     alias ssh="kitty +kitten ssh"
 fi
 
@@ -87,12 +88,7 @@ gcl() {
 }
 
 export EDITOR='nvim'
-TERMINAL='kitty'
-IDISP='eDP1'
-EDISP='HDMI1'
-
-# Fix GPG GUIs
-export GPG_TTY=$(tty)
+export TERMINAL='kitty'
 
 # Python user installed modules
 PATH="$HOME/.local/bin:$PATH"

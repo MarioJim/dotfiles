@@ -25,7 +25,7 @@ popd > /dev/null
 popd > /dev/null
 
 # Install aur packages
-paru -S espanso-git fuzzy-pdf google-chrome i3gaps-next-git i3lock-color      \
+paru -S espanso-git fuzzy-pdf google-chrome i3-gaps-next-git i3lock-color     \
     neovim-plug oh-my-zsh-git picom-git polybar spotify ttf-google-fonts-git  \
     ttf-google-sans ttf-twemoji-color visual-studio-code-bin xidlehook zoom
 

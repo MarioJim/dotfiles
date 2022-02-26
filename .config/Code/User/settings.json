@@ -24,7 +24,7 @@
   "window.menuBarVisibility": "toggle",
   "workbench.colorTheme": "Plastic - deprioritised punctuation",
   "workbench.editorAssociations": {
-    "*.pdf": "pdf.preview",
+    "*.pdf": "latex-workshop-pdf-hook",
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   "workbench.iconTheme": "material-icon-theme",
@@ -54,6 +54,7 @@
     "editor.tabSize": 2
   },
   "dart.debugSdkLibraries": false,
+  "gitlens.codeLens.enabled": false,
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
@@ -105,5 +106,6 @@
   "[typescriptreact]": {
     "editor.tabSize": 2
   },
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "redhat.telemetry.enabled": false
 }

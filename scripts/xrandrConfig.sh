@@ -1,12 +1,16 @@
-#!/bin/zsh
+#!/bin/sh
 
-source "/home/mario/.zshrc"
-
-if xrandr | grep -A 1 "$EDISP connected" | grep "2560x1080"; then
-    xrandr --output "$IDISP" --auto --pos 320x1080 --output "$EDISP" --auto --pos 0x0
-elif xrandr | grep -A 1 "$EDISP connected" | grep "1920x1080"; then
-    xrandr --output "$IDISP" --auto --output "$EDISP" --auto --above "$IDISP"
+if xrandr | rg "HDMI-1 connected"; then
+    xrandr --output "eDP-1" --auto \
+           --output "HDMI-1" --auto --above "eDP-1" \
+           --output "DP-1" --off
+elif xrandr | rg "^DP-1 connected"; then
+    xrandr --output "eDP-1" --auto --pos 440x1440 \
+           --output "HDMI-1" --off \
+           --output "DP-1" --auto --mode 3440x1440 --rate 120 --pos 0x0
 else
-    xrandr --output "$IDISP" --auto
+    xrandr --output "eDP-1" --auto \
+           --output "HDMI-1" --off \
+           --output "DP-1" --off
 fi
 

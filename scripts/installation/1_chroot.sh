@@ -15,7 +15,7 @@ echo "arch" > /etc/hostname
 cat >> /etc/hosts <<EOL
 127.0.0.1     localhost
 ::1           localhost
-127.0.1.1     arch.domain     arch
+127.0.1.1     arch
 EOL
 
 # Run `mkinitcpio -P` if modified mkinitcpio.conf

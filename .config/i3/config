@@ -3,7 +3,7 @@
 set $mod Mod1
 
 # font for window titles
-font pango:Inter 11
+font pango:Inter 12
 
 # arrow keys alternative
 set $left h
@@ -21,7 +21,7 @@ bindsym $mod+Shift+n exec google-chrome-stable --incognito
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# Use pactl to adjust volume in PulseAudio.
+# Use pactl to adjust volume in PulseAudio
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
@@ -32,13 +32,12 @@ bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send ' brightnes
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send ' brightness down'"
 
 # screenshot bindings
-bindsym Print exec "flameshot gui -p $HOME/Pictures/Screenshots"
+bindsym Print exec "flameshot gui"
 bindsym Shift+Print exec "flameshot full -p $HOME/Pictures/Screenshots"
 bindsym Control+Print exec "normcap -l spa"
 
 # media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
@@ -135,7 +134,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r exec "/home/mario/scripts/xrandrConfig.sh && i3-msg restart"
 # exit i3
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
@@ -184,6 +183,8 @@ hide_edge_borders both
 for_window [class="jetbrains-.*" title="win0"] floating enable
 # Floating Zoom notifications
 for_window [class="zoom" title="zoom"] floating enable
+# Floating Charles splash
+for_window [class="com-xk72-charles-gui-MainWithClassLoader" title="win0"] floating enable
 
 # verify monitor config
 exec --no-startup-id $HOME/scripts/xrandrConfig.sh
@@ -194,11 +195,11 @@ exec_always --no-startup-id feh --no-fehbg --randomize --bg-fill $HOME/Pictures/
 # run startup and tray programs
 exec_always --no-startup-id picom --experimental-backends -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1 &
 exec --no-startup-id nm-applet &
 exec --no-startup-id dunst &
 exec --no-startup-id touchegg --client &
 exec --no-startup-id sleep 1 && touchegg-music-client &
-exec --no-startup-id flameshot &
 exec --no-startup-id $HOME/scripts/autoLockscreen.sh
 
 for_window [class="Spotify"] move to workspace "$ws1"

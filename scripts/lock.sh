@@ -13,7 +13,7 @@ i3lock \
     --separator-color=00000000       \
     --radius=32                      \
     --ring-width=7                   \
-    --ind-pos="100:980"              \
+    --ind-pos="100:1060"             \
     \
     --inside-color=00000000          \
     --insidever-color=00000000       \
