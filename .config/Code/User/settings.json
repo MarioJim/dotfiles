@@ -1,22 +1,27 @@
 {
   "debug.openDebug": "openOnDebugBreak",
   "diffEditor.ignoreTrimWhitespace": false,
+  "editor.bracketPairColorization.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "'Fira Code Retina', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
+  "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.rulers": [100],
+  "editor.rulers": [80, 100],
+  "editor.stickyScroll.enabled": true,
   "editor.wordWrap": "on",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "extensions.ignoreRecommendations": true,
   "git.confirmSync": false,
   "git.autofetch": true,
+  "gitlens.codeLens.enabled": false,
   "keyboard.dispatch": "keyCode",
-  "liveServer.settings.donotShowInfoMsg": true,
+  "redhat.telemetry.enabled": false,
+  "terminal.integrated.gpuAcceleration": "off",
   "update.mode": "manual",
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/bin/nvim",
@@ -25,36 +30,46 @@
   "workbench.colorTheme": "Plastic - deprioritised punctuation",
   "workbench.editorAssociations": {
     "*.pdf": "latex-workshop-pdf-hook",
-    "*.ipynb": "jupyter.notebook.ipynb"
+    "*.ipynb": "jupyter-notebook"
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.startupEditor": "none",
   "[bibtex]": {
     "editor.defaultFormatter": null
   },
   "[dart]": {
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
-    "editor.detectIndentation": false,
-    "editor.suggest.insertMode": "replace",
     "editor.defaultFormatter": "Dart-Code.dart-code",
-    "editor.rulers": [80],
+    "editor.detectIndentation": false,
+    "editor.formatOnType": true,
+    "editor.insertSpaces": true,
     "editor.selectionHighlight": false,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
+    "editor.suggest.insertMode": "replace",
     "editor.tabCompletion": "onlySnippets",
+    "editor.tabSize": 2,
     "editor.wordBasedSuggestions": false
   },
+  "dart.debugSdkLibraries": false,
   "[clojure]": {
     "editor.defaultFormatter": null
   },
   "[css]": {
     "editor.suggest.insertMode": "replace",
-    "gitlens.codeLens.scopes": ["document"],
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "gitlens.codeLens.scopes": ["document"]
   },
-  "dart.debugSdkLibraries": false,
-  "gitlens.codeLens.enabled": false,
+  "[elixir]": {
+    "editor.defaultFormatter": "JakeBecker.elixir-ls",
+    "editor.formatOnType": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.trimAutoWhitespace": false,
+    "editor.wordBasedSuggestions": false,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true
+  },
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
@@ -93,11 +108,10 @@
   },
   "python.formatting.autopep8Path": "/usr/bin/autopep8",
   "[rust]": {
-    "editor.defaultFormatter": "matklad.rust-analyzer"
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
   "rust-analyzer.checkOnSave.command": "clippy",
   "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
-  "rust-analyzer.cargo.runBuildScripts": true,
   "rust-analyzer.files.excludeDirs": ["/target"],
   "[typescript]": {
     "editor.tabSize": 2
@@ -105,7 +119,5 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "[typescriptreact]": {
     "editor.tabSize": 2
-  },
-  "workbench.startupEditor": "none",
-  "redhat.telemetry.enabled": false
+  }
 }

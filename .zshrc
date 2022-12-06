@@ -1,5 +1,6 @@
 DISABLE_MAGIC_FUNCTIONS=true
-ZSH=/usr/share/oh-my-zsh/
+ZSH="/usr/share/oh-my-zsh"
+[[ ! -d "$ZSH" ]] && ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
 HYPHEN_INSENSITIVE="true"
@@ -15,12 +16,12 @@ plugins=(
     docker-compose
 )
 
-ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+ZSH_CACHE_DIR="$HOME/.cache/oh-my-zsh"
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
 alias cat="bat"
 alias cp="rsync -ah --info=progress2"
@@ -90,12 +91,14 @@ gcl() {
 export EDITOR='nvim'
 export TERMINAL='kitty'
 
-# Python user installed modules
+# Add Python user packages to path
 PATH="$HOME/.local/bin:$PATH"
-# Go user installed modules
+# Add Go user packages to path
 PATH="$HOME/go/bin:$PATH"
-# Install node modules globally to user (without sudo)
+# Add JavaScript user packages to path
 PATH="$HOME/.node_modules/bin:$PATH"
+# Add Dart user packages on path
+PATH="$HOME/.pub-cache/bin:$PATH"
 export npm_config_prefix="$HOME/.node_modules"
 # Android vars
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
@@ -104,9 +107,21 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export CHROME_EXECUTABLE=google-chrome-stable
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+# Enable Docker Buildkit
+export DOCKER_BUILDKIT=1
+#  Enable rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # Must be at the end of the .zshrc file
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_PLUGINS_PATH="/usr/share/zsh/plugins"
+
+ZSH_AUTOSUG_PATH="$ZSH_PLUGINS_PATH/zsh-autosuggestions/zsh-autosuggestions.zsh"
+[[ ! -f "$ZSH_AUTOSUG_PATH" ]] && ZSH_AUTOSUG_PATH="/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+[[ -f "$ZSH_AUTOSUG_PATH" ]] && source "$ZSH_AUTOSUG_PATH"
+
+ZSH_SYNTAX_HIGHL_PATH="$ZSH_PLUGINS_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+[[ ! -f "$ZSH_SYNTAX_HIGHL_PATH" ]] && ZSH_SYNTAX_HIGHL_PATH="/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+[[ -f "$ZSH_SYNTAX_HIGHL_PATH" ]] && source "$ZSH_SYNTAX_HIGHL_PATH"
 

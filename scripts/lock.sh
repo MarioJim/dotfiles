@@ -2,6 +2,10 @@
 
 # Based on https://github.com/lokesh-krishna/dotfiles/blob/master/nord-v2/bin/lock.sh
 
+TOP_MONITOR_HEIGHT=$(xrandr | rg " connected" | rg ".*\d+x(\d+)\+\d+\+0.*" -r '$1' | head -1)
+TOP_MONITOR_HEIGHT="${TOP_MONITOR_HEIGHT:=1600}"
+CLOCK_Y_POS=$(( ($TOP_MONITOR_HEIGHT - 400) * 120 / $(xrdb -get Xft.dpi) ))
+
 i3lock \
     --nofork                         \
     --ignore-empty-password          \
@@ -13,7 +17,7 @@ i3lock \
     --separator-color=00000000       \
     --radius=32                      \
     --ring-width=7                   \
-    --ind-pos="100:1060"             \
+    --ind-pos="100:$CLOCK_Y_POS"     \
     \
     --inside-color=00000000          \
     --insidever-color=00000000       \
