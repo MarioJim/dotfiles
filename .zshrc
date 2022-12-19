@@ -30,7 +30,7 @@ alias fp="fuzzy-pdf . \"zathura {} --find={q}\""
 alias ls="exa -al"
 alias pp="paru"
 alias zat="zathura --fork"
-alias pdfdiff="git difftool --tool=diffpdf"
+alias hx="helix"
 if [ "$TERM" = "xterm-kitty" ]; then
     alias ssh="kitty +kitten ssh"
 fi

@@ -4,7 +4,7 @@
 
 TOP_MONITOR_HEIGHT=$(xrandr | rg " connected" | rg ".*\d+x(\d+)\+\d+\+0.*" -r '$1' | head -1)
 TOP_MONITOR_HEIGHT="${TOP_MONITOR_HEIGHT:=1600}"
-CLOCK_Y_POS=$(( ($TOP_MONITOR_HEIGHT - 400) * 120 / $(xrdb -get Xft.dpi) ))
+CLOCK_Y_POS=$(( (TOP_MONITOR_HEIGHT - 400) * 120 / $(xrdb -get Xft.dpi) ))
 
 i3lock \
     --nofork                         \

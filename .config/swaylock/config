@@ -1,0 +1,37 @@
+ignore-empty-password
+screenshots
+
+clock
+timestr=I:%M %P
+datestr=%a, %e of %B
+font="Google Sans Medium"
+
+indicator
+indicator-radius=240
+indicator-thickness=20
+indicator-caps-lock
+
+key-hl-color=880033
+bs-hl-color=ee2e24FF
+separator-color=00000000
+
+inside-color=00000099
+inside-clear-color=ffd20400
+inside-ver-color=d9d8d800
+inside-wrong-color=ee2e2400
+
+ring-color=eceff4d9
+ring-clear-color=231f20d9
+ring-ver-color=6dab3cd9
+ring-wrong-color=bf616ad9
+
+line-color=00000000
+line-clear-color=ffd204FF
+line-ver-color=d9d8d8FF
+line-wrong-color=ee2e24FF
+
+text-clear-color=ffd20400
+text-ver-color=d9d8d800
+text-wrong-color=ee2e2400
+
+effect-blur=16x2
