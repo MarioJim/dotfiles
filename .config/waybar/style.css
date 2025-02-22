@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Symbols Nerd Font Mono";
+  font-size: 11pt;
+  transition-property: background;
+  transition-duration: 0.5s;
+}
+
+#waybar {
+  background: rgba(10, 10, 10, 0.4);
+  color: #ddd;
+}
+
+#waybar > box {
+  padding: 4pt;
+}
+
+#workspaces button {
+  color: #777;
+  font-weight: 700;
+  margin-left: 6pt;
+}
+#workspaces button.active {
+  color: #74c7ec;
+}
+
+#mpris {
+  margin: 0 8pt;
+}
+#mpris.spotify { color: #a6e3a1; }
+#mpris.vlc { color: #fc9d03; }
+
+tooltip {
+  background: #11111b;
+  border-radius: 6pt;
+}
+
+tooltip tt {
+  /* TODO: Fix the calendar. */
+  font-family: "Source Code Pro";
+}
+

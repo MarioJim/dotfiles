@@ -1,2 +1,0 @@
-source ~/.config/nvim/init.vim
-imap <C-v> <Esc>l<Action>($Paste)i

@@ -5,7 +5,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "'Fira Code Retina', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
-  "editor.fontSize": 13,
+  "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
@@ -18,26 +18,17 @@
   "extensions.ignoreRecommendations": true,
   "git.confirmSync": false,
   "git.autofetch": true,
-  "gitlens.codeLens.enabled": false,
   "keyboard.dispatch": "keyCode",
-  "redhat.telemetry.enabled": false,
-  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.fontFamily": "Fira Code Retina, Symbols Nerd Font Mono",
   "update.mode": "manual",
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/bin/nvim",
   "vim.useSystemClipboard": true,
   "window.menuBarVisibility": "toggle",
   "workbench.colorTheme": "Plastic - deprioritised punctuation",
-  "workbench.editorAssociations": {
-    "*.pdf": "latex-workshop-pdf-hook",
-    "*.ipynb": "jupyter-notebook"
-  },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "none",
-  "[bibtex]": {
-    "editor.defaultFormatter": null
-  },
   "[dart]": {
     "editor.defaultFormatter": "Dart-Code.dart-code",
     "editor.detectIndentation": false,
@@ -48,35 +39,20 @@
     "editor.suggest.insertMode": "replace",
     "editor.tabCompletion": "onlySnippets",
     "editor.tabSize": 2,
-    "editor.wordBasedSuggestions": false
+    "editor.wordBasedSuggestions": "off"
   },
-  "dart.debugSdkLibraries": false,
   "[clojure]": {
     "editor.defaultFormatter": null
   },
   "[css]": {
     "editor.suggest.insertMode": "replace",
-    "editor.tabSize": 2,
-    "gitlens.codeLens.scopes": ["document"]
-  },
-  "[elixir]": {
-    "editor.defaultFormatter": "JakeBecker.elixir-ls",
-    "editor.formatOnType": true,
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.trimAutoWhitespace": false,
-    "editor.wordBasedSuggestions": false,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true
+    "editor.tabSize": 2
   },
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
-  "go.useLanguageServer": true,
   "[html]": {
     "editor.suggest.insertMode": "replace",
-    "gitlens.codeLens.scopes": ["document"],
     "editor.tabSize": 2
   },
   "[javascript]": {
@@ -86,31 +62,14 @@
   "[latex]": {
     "editor.defaultFormatter": null
   },
-  "latex-workshop.latex.autoBuild.run": "onSave",
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "tectonic",
-      "tools": ["tectonic"]
-    }
-  ],
-  "latex-workshop.latex.tools": [
-    {
-      "name": "tectonic",
-      "command": "tectonic",
-      "args": ["-Zshell-escape", "%DOCFILE%.tex"],
-      "env": {}
-    }
-  ],
-  "latex-workshop.view.pdf.viewer": "tab",
   "[python]": {
     "editor.defaultFormatter": "ms-python.python",
     "editor.rulers": [80]
   },
-  "python.formatting.autopep8Path": "/usr/bin/autopep8",
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
-  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.checkOnSave": true,
   "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
   "rust-analyzer.files.excludeDirs": ["/target"],
   "[typescript]": {
